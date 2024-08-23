@@ -1,0 +1,55 @@
+@import url("../css-utils/keyframes.css");
+
+.container {
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  gap: 3em;
+}
+
+.description {
+  flex: 1 1 50%;
+  border-radius: 15px;
+
+  /* animation */
+  opacity: 0;
+  transform: scale(0.95) translateX(-15%);
+  animation-fill-mode: forwards;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.emoji {
+  color: rgba(255, 255, 255, 1);
+}
+
+.text a {
+  text-decoration: underline;
+}
+
+.text a,
+.highlight {
+  color: var(--main-cyan-300);
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  flex: 0 1 500px;
+  max-height: 500px;
+  overflow: hidden;
+  /* animation */
+  opacity: 0;
+  transform: translateY(15%);
+  animation-fill-mode: forwards;
+}
+
+.img {
+  max-width: 100%;
+  object-fit: contain;
+}

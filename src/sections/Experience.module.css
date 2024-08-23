@@ -1,0 +1,67 @@
+@import url("../css-utils/keyframes.css");
+
+.container {
+  position: relative;
+  padding: 1em 2em;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(33, 33, 33, 0.9), rgba(0, 0, 0, 0.845)),
+    /* url("/kevin-laminto-futuristic-unsplash.jpg"); */
+      url("https://images.unsplash.com/photo-1604706924699-108850a7df9e?q=80&w=1895&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+  background-size: cover;
+}
+
+.content {
+  /* animation */
+  opacity: 0;
+  transform: scale(0.9);
+  animation-fill-mode: forwards;
+}
+
+.details {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  font-size: 2rem;
+}
+
+.button {
+  position: relative;
+  padding: 1em 1.5em;
+  border: var(--main-cyan-300) 2px solid;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: scale 1s ease;
+  box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.186);
+  animation: pulse 1s ease-in-out alternate infinite;
+}
+
+.button:hover {
+  scale: 1.05;
+  animation: none;
+}
+
+.button:focus,
+.button:active {
+  border: var(--main-sunset-300) 2px solid;
+  box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.186);
+  animation: none;
+}
+
+.bgImg {
+  position: absolute;
+  top: 0;
+  width: 100svw;
+  z-index: 5;
+}

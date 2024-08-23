@@ -1,0 +1,180 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  /* Animation for dark mode */
+  transition: background-color 0.3s, border 0.3s;
+}
+
+html {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+  --box-shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.5);
+  --box-shadow-xl: 0 10px 24px rgba(0, 0, 0, 0.5);
+  --box-shadow-xxl: 0 15px 35px rgba(0, 0, 0, 0.5);
+
+  --box-shadow-x2-sm: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow-x2-md: 0 3px 6px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.12);
+  --box-shadow-x2-lg: 0 10px 20px rgba(0, 0, 0, 0.15),
+    0 3px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-x2-xl: 0 15px 25px rgba(0, 0, 0, 0.12),
+    0 5px 10px rgba(0, 0, 0, 0.02);
+  --box-shadow-x2-xxl: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+  --button-shadow-sm_light: 0 1px 3px rgba(255, 255, 255, 0.15),
+    inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  --button-shadow-sm_dark: 0 1px 3px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  --button-shadow-md_light: 0 2px 0 rgba(255, 255, 255, 0.15),
+    inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  --button-shadow-md_dark: 0 2px 0 rgba(0, 0, 0, 0.2),
+    inset 0 2px 2px rgba(255, 255, 255, 0.15);
+
+  --main-cyan-100: rgb(219, 242, 241); /* Lightest */
+  --main-cyan-200: rgb(177, 229, 227);
+  --main-cyan-300: rgb(135, 216, 213);
+  --main-cyan-400: rgb(93, 203, 199);
+  --main-cyan-500: rgb(51, 190, 185); /* Base cyan-green */
+  --main-cyan-600: rgb(46, 171, 167);
+  --main-cyan-700: rgb(41, 152, 149);
+  --main-cyan-800: rgb(36, 133, 131);
+  --main-cyan-900: rgb(31, 114, 113); /* Darkest */
+
+  --main-sunset-100: rgb(255, 237, 220); /* Lightest */
+  --main-sunset-200: rgb(255, 220, 185);
+  --main-sunset-300: rgb(255, 203, 150);
+  --main-sunset-400: rgb(255, 186, 115);
+  --main-sunset-500: rgb(255, 169, 80); /* Base sunset orange */
+  --main-sunset-600: rgb(230, 152, 72);
+  --main-sunset-700: rgb(199, 132, 62);
+  --main-sunset-800: rgb(168, 112, 53);
+  --main-sunset-900: rgb(137, 92, 43); /* Darkest */
+
+  --main-text-color: rgba(255, 255, 255, 0.9);
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  color: rgb(47, 47, 47);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea,
+button,
+select,
+span,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input:focus,
+input:active,
+textarea:focus,
+textarea:active,
+select:focus,
+select:active,
+button:focus,
+button:active,
+a:focus,
+a:visited,
+a:active,
+textarea,
+button,
+select,
+span,
+a {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav,
+/* main, */
+footer {
+  padding: 2rem 5rem;
+  @media (max-width: 40rem) {
+    padding: 1rem 3rem;
+  }
+  @media (max-width: 26rem) {
+    padding: 1rem 2rem;
+  }
+}
+
+h1,
+h2:not(#no-letter-space) {
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 2em;
+  @media (max-width: 52rem) {
+    font-size: 1.7em;
+  }
+  @media (max-width: 40rem) {
+    font-size: 1.5em;
+  }
+}
+
+h2 {
+  padding-block: 1em;
+  font-size: 1.5em;
+  opacity: 0.7;
+  @media (max-width: 52rem) {
+    font-size: 1.3em;
+  }
+  @media (max-width: 40rem) {
+    font-size: 1.1em;
+  }
+}

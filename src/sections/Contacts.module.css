@@ -1,0 +1,38 @@
+.outermost {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.container {
+  padding: 1em;
+  width: 500px;
+  max-width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  text-align: center;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+
+.logo {
+  font-size: 3rem;
+  transition: color 0.5s ease, transform 0.5s ease-in;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: var(--main-cyan-300);
+  transform: scale(1.05) translateY(-5px);
+  transition: color 0.2s ease, transform 0.3s ease-in;
+}

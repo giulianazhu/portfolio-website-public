@@ -1,0 +1,50 @@
+@import url("../css-utils/keyframes.css");
+
+.container {
+  height: 700px; /*bg-pic height*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 8rem;
+  @media (max-width: 40rem) {
+    padding-inline: 6rem;
+  }
+  @media (max-width: 26rem) {
+    padding-inline: 4rem;
+  }
+}
+
+.headline {
+  font-size: 8rem;
+  background: linear-gradient(
+    45deg,
+    rgb(255, 255, 255),
+    rgba(108, 211, 255, 0.8)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  @media (max-width: 40rem) {
+    font-size: 4rem;
+  }
+  /* animation */
+  animation: slide-down 1s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateY(-10%);
+}
+
+.descriptor {
+  animation: slide-right 1s 0.5s ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateX(-5%);
+}
+
+.description {
+  animation: slide-right 1s 0.5s ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateX(-5%);
+}

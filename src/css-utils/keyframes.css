@@ -1,0 +1,75 @@
+@keyframes arrowfill {
+  to {
+    color: var(--main-sunset-500);
+    opacity: 1;
+    scale: 1.1;
+    transform-origin: left;
+  }
+}
+
+@keyframes fill {
+  to {
+    opacity: 1;
+    scale: 1.1;
+    transform-origin: left;
+  }
+}
+
+@keyframes progress {
+  to {
+    transform: translatex(-100%) scaleY(1);
+  }
+}
+
+@keyframes pulse {
+  to {
+    scale: 1.05;
+  }
+}
+
+@keyframes push {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-up {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-down {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-up {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-right {
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}

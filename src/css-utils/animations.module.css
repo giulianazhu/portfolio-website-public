@@ -1,0 +1,24 @@
+@import url("keyframes.css");
+
+.animate-about-description {
+  animation: slide-right 1.5s ease-out;
+}
+
+.animate-about-img {
+  animation: slide-up 1.5s ease-out;
+}
+
+.animate-skill-list {
+  animation: scale-up 1s ease-out;
+}
+
+.animate-project-card1,
+.animate-project-card2,
+.animate-project-card3,
+.animate-project-card4 {
+  animation: slide-left 1s 0.2s ease-out;
+}
+
+.animate-experience-content {
+  animation: scale-up 1s 0.2s ease-out;
+}
