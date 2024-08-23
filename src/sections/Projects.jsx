@@ -103,7 +103,7 @@ export default function Projects() {
             img="portfolio.png"
             alt="screenshot of portfolio website"
             demoLink="https://giuliana-zhu.netlify.app/"
-            repoLink="https://github.com/giulianazhu/portfolio"
+            repoLink="https://github.com/giulianazhu/portfolio-website-public"
           />
         </TimePoint>
         <TimePoint
