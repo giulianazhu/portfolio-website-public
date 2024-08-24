@@ -12,6 +12,7 @@
 html {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 62.5%;
+  background-color: black;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

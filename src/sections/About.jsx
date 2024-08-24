@@ -47,8 +47,9 @@ export default function About() {
       </div>
       <div className={`${styles.wrap} animate`} id="animate-about-img">
         <img
-          src="ray-zhuang-japan-unsplash.jpg"
-          alt="photo taken at villa borghese"
+          // src="ray-zhuang-japan-unsplash.jpg"
+          src="https://images.unsplash.com/photo-1607419726991-5fc7e74cda67?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OHxNR29Ra3BsUnhkY3x8ZW58MHx8fHx8"
+          alt="photo by ray-zhuang-unsplash"
           className={styles.img}
         />
       </div>
