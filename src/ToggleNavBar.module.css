@@ -33,11 +33,15 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+  & .text {
+    transition: transform 0.1s 0.1s ease;
+  }
+  & .underline {
+    transition: scale 0.1s linear;
+  }
 }
 
-.links a:hover,
-.links a:focus,
-.links a:active {
+.links a:hover {
   scale: 1;
   color: var(--main-cyan-200);
   & .text {

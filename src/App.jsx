@@ -17,7 +17,6 @@ function handleAnimate(entries) {
 
   if (visible.length > 0) {
     visible.forEach((entry) => {
-      console.log("not-animated-yet");
       const id = entry.target.getAttribute("id");
       entry.target.classList.add(animations[id]);
     });
@@ -30,7 +29,7 @@ function App() {
   useSyncLink();
   // useAnimateOnView();
   //--> if i abstract below code ==> animations.module.css will be required in App.css in order to work, even if not visibly being accessed ==> coz of js dynamically added css module classes
-  //--> therefore, to avoid confusion, i will keep the useAnimateOnView logic in the App.css
+  //--> therefore, to avoid confusion, i will keep the useAnimateOnView logic in the App.jsx
 
   useEffect(function () {
     const observer = new IntersectionObserver(handleAnimate, {
