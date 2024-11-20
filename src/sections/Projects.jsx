@@ -106,10 +106,7 @@ export default function Projects() {
             repoLink="https://github.com/giulianazhu/portfolio-website-public"
           />
         </TimePoint>
-        <TimePoint
-          timeTitle="Work project MyCarsafe"
-          date="November 2024 ongoing"
-        >
+        <TimePoint timeTitle="Work project" date="November 2024 ongoing">
           <ProjectCard
             id="5"
             title="work project"
