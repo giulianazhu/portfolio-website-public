@@ -23,7 +23,7 @@ export default function Nav() {
         <NavLink href="#projects">Projects</NavLink>
         <NavLink href="#experience">Experience</NavLink>
         <NavLink href="#contacts">Contacts</NavLink>
-        <NavLink href="giulianazhu_resume.pdf" download={true}>
+        <NavLink href="giulianazhu_current_resume.pdf" download={true}>
           Resume
         </NavLink>
         <div className={styles.toggler} onClick={handleToggleNav}>

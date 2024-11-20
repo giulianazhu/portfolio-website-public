@@ -15,7 +15,8 @@
 .animate-project-card1,
 .animate-project-card2,
 .animate-project-card3,
-.animate-project-card4 {
+.animate-project-card4,
+.animate-project-card5 {
   animation: slide-left 1s 0.2s ease-out;
 }
 

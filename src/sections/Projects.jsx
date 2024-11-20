@@ -107,6 +107,25 @@ export default function Projects() {
           />
         </TimePoint>
         <TimePoint
+          timeTitle="Work project MyCarsafe"
+          date="November 2024 ongoing"
+        >
+          <ProjectCard
+            id="5"
+            title="work project"
+            description="React TypeScript website built with Ant Design"
+            skills={[
+              "React.js",
+              "Responsive Web Design",
+              "Ant Design",
+              "TypeScript",
+              "Dynamic Labelling",
+            ]}
+            img="work-project.png"
+            alt="example website screenshot"
+          />
+        </TimePoint>
+        <TimePoint
           timeTitle="Journy to be continued..."
           date="august 2024 ..."
         ></TimePoint>
@@ -168,13 +187,21 @@ function ProjectCard({
         <div className={styles.cardButtons}>
           <button
             className={styles.cardButton}
-            onClick={() => externalRedirect(demoLink)}
+            onClick={() =>
+              demoLink
+                ? externalRedirect(demoLink)
+                : alert("Apologies, demo not publicly available")
+            }
           >
             DEMO
           </button>
           <button
             className={styles.cardButton}
-            onClick={() => externalRedirect(repoLink)}
+            onClick={() =>
+              repoLink
+                ? externalRedirect(repoLink)
+                : alert("Apologies, repo not publicly available")
+            }
           >
             Github
           </button>

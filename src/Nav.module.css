@@ -25,7 +25,7 @@
   }
 }
 
-.link[href="giulianazhu_resume.pdf"] {
+.link[href="giulianazhu_current_resume.pdf"] {
   border-radius: 10px;
   border: rgba(255, 255, 255, 0.3) 1px solid;
 }
@@ -34,7 +34,7 @@
 .link:focus,
 .link:active {
   color: var(--main-sunset-500);
-  &[href="giulianazhu_resume.pdf"] {
+  &[href="giulianazhu_current_resume.pdf"] {
     border-color: var(--main-sunset-300);
   }
 }
