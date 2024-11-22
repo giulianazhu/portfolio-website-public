@@ -10,38 +10,37 @@ export default function About() {
         <h2>ABOUT ME</h2>
         <div className={styles.text}>
           <p>
-            Hi there! I&apos;m Giuliana, thank you for checking out my portfolio
+            {"Hi there! I'm Giuliana, thank you for checking out my portfolio"}
             <span className={styles.emoji}> &#x1F917;</span>!
           </p>
           <p>
-            I started learning web development in 2023, during the summer of my
-            sophomore year. Having had a multi-cultural upbringing and
-            possessing a curious minded personality, I decided to switch to a
-            stimulating and dynamic career, with a fine balance between logic,
-            analysis, and creativity!
+            {
+              "I started learning web development in 2023 and got my first developer job in 2024. Having had a multi-cultural upbringing and being curious minded, I decided to switch to a stimulating and dynamic career, with a fine balance between logic, analysis, and creativity!"
+            }
           </p>
           <p>
-            While I still haven&apos;t found my niche in this field, I&apos;m
-            currently more inclined towards{" "}
+            {"I'm currently more inclined "}
             <span className={styles.highlight}>
-              front-end or full-stack development
+              {"front-end or full-stack development"}
             </span>
-            , particularly around{" "}
+            {", particularly around "}
             <span className={styles.highlight}>
-              web, native, or game applications
+              {"web, native, or game applications"}
             </span>
-            . My current goal is to accumulate work experience while continuing
-            exploring my potentials and further opportunities.
+            {
+              ". My current goal is to accumulate work experience while continuing exploring my potentials and further opportunities."
+            }
           </p>
           <p>
-            I&apos;m proficient in HTML, CSS, JavaScript, React.js, and
-            moderately knowldgeable around other technology stacks as well{" "}
+            {
+              "I'm proficient in HTML, CSS, JavaScript/TypeScript, React.js, and moderately knowldgeable around other technology stacks as well "
+            }
             <a href="#skills">[check out my skills]</a>.
           </p>
           <p>
-            Aside from coding, I enjoy curling up at home as much as running,
-            hiking, and exploring new places. And yes, I enjoy travelling, and
-            would love to visit Japan someday!
+            {
+              "Aside from coding, I enjoy curling up at home as much as running, hiking, and exploring new places. And yes, I enjoy travelling, and would love to visit Japan someday!"
+            }
           </p>
         </div>
       </div>

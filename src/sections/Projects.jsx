@@ -8,7 +8,6 @@ import { FaAngleDoubleUp } from "react-icons/fa";
 export default function Projects() {
   function handleSkip() {
     const element = document.querySelector("#animate-project-card4");
-    console.log(element);
     if (element) {
       element.scrollIntoView();
     }
@@ -123,8 +122,8 @@ export default function Projects() {
           />
         </TimePoint>
         <TimePoint
-          timeTitle="Journy to be continued..."
-          date="august 2024 ..."
+          timeTitle="Hired as intern!"
+          date="September 2024 ..."
         ></TimePoint>
         <div className={styles.arrowHead}>
           <RiArrowDownSFill size={30} />
@@ -134,7 +133,7 @@ export default function Projects() {
   );
 }
 
-function TimePoint({ children, timeTitle, date }) {
+export function TimePoint({ children, timeTitle, date }) {
   return (
     <div className={styles.timePoint}>
       <h4 className={styles.timeHeader}>
@@ -153,7 +152,7 @@ function TimePoint({ children, timeTitle, date }) {
   );
 }
 
-function ProjectCard({
+export function ProjectCard({
   id,
   title,
   description,

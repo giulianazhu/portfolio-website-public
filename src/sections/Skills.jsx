@@ -1,6 +1,15 @@
 import styles from "./Skills.module.css";
-import { FaCss3, FaGitAlt, FaHtml5, FaPython, FaReact } from "react-icons/fa6";
 import {
+  FaAngular,
+  FaCss3,
+  FaGitAlt,
+  FaHtml5,
+  FaPython,
+  FaReact,
+} from "react-icons/fa6";
+import {
+  SiAntdesign,
+  SiExpress,
   SiJavascript,
   SiMysql,
   SiStyledcomponents,
@@ -14,6 +23,7 @@ export default function Skills() {
       <h2>SKILLS</h2>
       <div className={styles.container}>
         <List>
+          <h3>CORE</h3>
           <Item>
             <Icon>
               <FaHtml5 />
@@ -34,32 +44,22 @@ export default function Skills() {
           </Item>
           <Item>
             <Icon>
-              <FaReact />
-            </Icon>
-            React.js
-          </Item>
-        </List>
-        <List>
-          <Item>
-            <Icon>
-              <SiMysql />
-            </Icon>
-            MySQL
-          </Item>
-          <Item>
-            <Icon>
               <SiTypescript />
             </Icon>
             TypeScript
           </Item>
           <Item>
             <Icon>
-              <FaPython />
+              <FaReact />
             </Icon>
-            Python
+            React.js
           </Item>
-        </List>
-        <List>
+          <Item>
+            <Icon>
+              <SiAntdesign />
+            </Icon>
+            Ant Design
+          </Item>
           <Item>
             <Icon>
               <SiTailwindcss />
@@ -77,6 +77,33 @@ export default function Skills() {
               <FaGitAlt />
             </Icon>
             Git
+          </Item>
+        </List>
+        <List>
+          <h3>OTHER TECH STACK</h3>
+          <Item>
+            <Icon>
+              <SiMysql />
+            </Icon>
+            MySQL
+          </Item>
+          <Item>
+            <Icon>
+              <SiExpress />
+            </Icon>
+            Express.Js
+          </Item>
+          <Item>
+            <Icon>
+              <FaPython />
+            </Icon>
+            Python
+          </Item>
+          <Item>
+            <Icon>
+              <FaAngular />
+            </Icon>
+            Angular
           </Item>
         </List>
       </div>

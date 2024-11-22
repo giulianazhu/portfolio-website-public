@@ -8,12 +8,16 @@ export default function Experience() {
         id="animate-experience-content"
       >
         <h2>EXPERIENCE</h2>
-        <div className={styles.details}>
-          No relevant work experience yet. Looking for any internship or
-          entry-level developer position!
-          <a className={styles.button} href="#contacts">
-            Hire Me!
-          </a>
+        <div>
+          <div className={styles.details}>
+            <h4>SEPTEMBER 2024 - ongoing</h4>
+            Currently working as front-end developer intern for a start-up
+            company. Feel free to reach out for job offers from Japan or remote
+            positions, or if you simply want to connect.
+            <a className={styles.button} href="#contacts">
+              REACH OUT
+            </a>
+          </div>
         </div>
       </div>
     </div>
