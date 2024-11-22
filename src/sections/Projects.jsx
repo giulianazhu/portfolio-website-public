@@ -105,6 +105,10 @@ export default function Projects() {
             repoLink="https://github.com/giulianazhu/portfolio-website-public"
           />
         </TimePoint>
+        <TimePoint
+          timeTitle="Hired as intern!"
+          date="September 2024 ..."
+        ></TimePoint>
         <TimePoint timeTitle="Work project" date="November 2024 ongoing">
           <ProjectCard
             id="5"
@@ -121,10 +125,6 @@ export default function Projects() {
             alt="example website screenshot"
           />
         </TimePoint>
-        <TimePoint
-          timeTitle="Hired as intern!"
-          date="September 2024 ..."
-        ></TimePoint>
         <div className={styles.arrowHead}>
           <RiArrowDownSFill size={30} />
         </div>
