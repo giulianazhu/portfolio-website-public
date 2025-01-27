@@ -1,12 +1,5 @@
 import styles from "./Skills.module.css";
-import {
-  FaAngular,
-  FaCss3,
-  FaGitAlt,
-  FaHtml5,
-  FaPython,
-  FaReact,
-} from "react-icons/fa6";
+import { FaAngular, FaCss3, FaGitAlt, FaHtml5, FaReact } from "react-icons/fa6";
 import {
   SiAntdesign,
   SiExpress,
@@ -92,12 +85,6 @@ export default function Skills() {
               <SiExpress />
             </Icon>
             Express.Js
-          </Item>
-          <Item>
-            <Icon>
-              <FaPython />
-            </Icon>
-            Python
           </Item>
           <Item>
             <Icon>

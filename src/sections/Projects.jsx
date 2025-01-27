@@ -1,86 +1,71 @@
 import styles from "./Projects.module.css";
 import { RiArrowDownSFill } from "react-icons/ri";
-import { FiExternalLink } from "react-icons/fi";
 import { externalRedirect } from "../js-utils/utils";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
-import { FaAngleDoubleUp } from "react-icons/fa";
+import { Carousel } from "antd";
 
 export default function Projects() {
-  function handleSkip() {
-    const element = document.querySelector("#animate-project-card4");
-    if (element) {
-      element.scrollIntoView();
-    }
-  }
   return (
     <>
-      <h2>MY JOURNEY</h2>
+      <h2>WORK PROJECTS</h2>
       <ul className={styles.container}>
         <div className={styles.progressBar}></div>
-        <a
-          className={styles.timeSkipper}
-          onClick={(e) => {
-            e.preventDefault();
-            handleSkip();
-          }}
-        >
-          <span className={styles.skipperIcon}>
-            <FaAngleDoubleUp />
-          </span>
-          START FROM THE END
-        </a>
         <TimePoint
-          timeTitle="First independent project"
-          date="april 2024 - june 2024"
+          timeTitle="Work project"
+          date="November 2024 - February 2025"
         >
           <ProjectCard
-            id="1"
-            title="cafe app"
-            description="My first independent React.js web app with booking and menu
-          features for both client and admin side"
-            skills={["React.js", "Tailwind CSS", "JavaScript", "supabase.js"]}
-            img="cafe-app-demo.png"
-            alt="screenshot of cafe-app demo menu page"
-            demoLink="https://cafe-app-demo.netlify.app/"
-            repoLink="https://github.com/giulianazhu/cafe-app"
-          />
-        </TimePoint>
-        <TimePoint timeTitle="Applying animation and theming" date="june 2024">
-          <ProjectCard
-            id="2"
-            title="bank landing page"
-            description="Landing page with theme switch and some animations."
+            id="5"
+            title="work project"
+            description="React TypeScript website built with Ant Design"
             skills={[
               "React.js",
               "Responsive Web Design",
-              "CSS Modules",
-              "JavaScript",
+              "Ant Design",
+              "TypeScript",
+              "Localization",
             ]}
-            img="bank-landing-demo.png"
-            alt="screenshot of bank landing page"
-            demoLink="https://bank-landing-demo.netlify.app/home"
-            repoLink="https://github.com/giulianazhu/landing-page-demo"
+            img={[
+              "workproject1/wp1.jpg",
+              "workproject1/wp2.jpg",
+              "workproject1/wp3.jpg",
+              "workproject1/wp4.png",
+            ]}
+            alt="example website screenshot"
+            isWorkProject={true}
           />
         </TimePoint>
+        <div className={styles.arrowHead}>
+          <RiArrowDownSFill size={30} />
+        </div>
+      </ul>
+      <h2>PERSONAL PROJECTS</h2>
+      <ul className={styles.container}>
+        <div className={styles.progressBar}></div>
         <TimePoint
           timeTitle="Improved design and first TypeScript application"
           date="july 2024"
         >
           <ProjectCard
             id="3"
-            title="recipe book - TS"
-            description="Recipe book web app using TypeScript with improved web design."
+            title="Visual library for artists and photographers"
+            description="Image gallery inspired by pinterest with filtered search and shuffle room"
             skills={[
               "React.js",
               "Responsive Web Design",
-              "styled-components",
+              "Ant Design",
               "TypeScript",
-              "JavaScript",
+              "localization",
             ]}
-            img="recipe-book-ts-demo.png"
-            alt="screenshot of recipe-book-ts demo search page"
-            demoLink="https://recipe-book-ts.netlify.app/home"
-            repoLink="https://github.com/giulianazhu/recipe-book-ts"
+            img={[
+              "visuallibrary/1.png",
+              "visuallibrary/2.png",
+
+              "visuallibrary/6.png",
+            ]}
+            alt="screenshot of visual library demo"
+            // demoLink="https://recipe-book-ts.netlify.app/home"
+            // repoLink="https://github.com/giulianazhu/recipe-book-ts"
           />
         </TimePoint>
         <TimePoint
@@ -99,30 +84,37 @@ export default function Projects() {
               "JavaScript",
               // "Animation"
             ]}
-            img="portfolio.png"
+            img={["portfolio.png"]}
             alt="screenshot of portfolio website"
             demoLink="https://giuliana-zhu.netlify.app/"
             repoLink="https://github.com/giulianazhu/portfolio-website-public"
           />
         </TimePoint>
         <TimePoint
-          timeTitle="Hired as intern!"
-          date="September 2024 ..."
-        ></TimePoint>
-        <TimePoint timeTitle="Work project" date="November 2024 ongoing">
+          timeTitle="Improved design and first TypeScript application"
+          date="july 2024"
+        >
           <ProjectCard
-            id="5"
-            title="work project"
-            description="React TypeScript website built with Ant Design"
+            id="3"
+            title="recipe book - TS"
+            description="Recipe book web app using TypeScript with improved web design."
             skills={[
               "React.js",
               "Responsive Web Design",
-              "Ant Design",
+              "styled-components",
               "TypeScript",
-              "Dynamic Labelling",
+              "JavaScript",
             ]}
-            img="work-project.png"
-            alt="example website screenshot"
+            img={[
+              "recipebook/0.png",
+              "recipebook/1.png",
+              "recipebook/2.png",
+              "recipebook/3.png",
+              "recipebook/4.png",
+            ]}
+            alt="screenshot of recipe-book-ts demo search page"
+            demoLink="https://recipe-book-ts.netlify.app/home"
+            repoLink="https://github.com/giulianazhu/recipe-book-ts"
           />
         </TimePoint>
         <div className={styles.arrowHead}>
@@ -161,14 +153,19 @@ export function ProjectCard({
   alt,
   demoLink,
   repoLink,
+  isWorkProject = false,
 }) {
   return (
     <li className={`${styles.card} animate`} id={`animate-project-card${id}`}>
       <div className={styles.imgWrap}>
-        <img src={img} alt={alt} className={styles.img} />
-        <div className={styles.link} onClick={() => externalRedirect(demoLink)}>
+        <Carousel arrows={img.length > 1}>
+          {img.map((img, i) => (
+            <img key={i} src={img} alt={alt} className={styles.cardImg} />
+          ))}
+        </Carousel>
+        {/* <div className={styles.link} onClick={() => externalRedirect(demoLink)}>
           <FiExternalLink />
-        </div>
+        </div> */}
       </div>
       <div className={styles.cardContent}>
         <h4 className={styles.cardTitle}>{title}</h4>
@@ -180,28 +177,30 @@ export function ProjectCard({
             </span>
           ))}
         </div>
-        <div className={styles.cardButtons}>
-          <button
-            className={styles.cardButton}
-            onClick={() =>
-              demoLink
-                ? externalRedirect(demoLink)
-                : alert("Apologies, demo not publicly available")
-            }
-          >
-            DEMO
-          </button>
-          <button
-            className={styles.cardButton}
-            onClick={() =>
-              repoLink
-                ? externalRedirect(repoLink)
-                : alert("Apologies, repo not publicly available")
-            }
-          >
-            Github
-          </button>
-        </div>
+        {!isWorkProject && (
+          <div className={styles.cardButtons}>
+            <button
+              className={styles.cardButton}
+              onClick={() =>
+                demoLink
+                  ? externalRedirect(demoLink)
+                  : alert("Apologies, demo not publicly available")
+              }
+            >
+              DEMO
+            </button>
+            <button
+              className={styles.cardButton}
+              onClick={() =>
+                repoLink
+                  ? externalRedirect(repoLink)
+                  : alert("Apologies, repo not publicly available")
+              }
+            >
+              Github
+            </button>
+          </div>
+        )}
       </div>
     </li>
   );
