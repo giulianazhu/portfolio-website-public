@@ -11,9 +11,9 @@ export default function Experience() {
         <div>
           <div className={styles.details}>
             <h4>SEPTEMBER 2024 - ongoing</h4>
-            Currently working as front-end developer intern for a start-up
-            company. Feel free to reach out for job offers from Japan or remote
-            positions, or if you simply want to connect.
+            Currently working as a front-end developer intern for a start-up
+            company.
+            <span>Looking for remote developer job positions.</span>
             <a className={styles.button} href="#contacts">
               REACH OUT
             </a>

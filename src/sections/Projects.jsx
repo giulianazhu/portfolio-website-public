@@ -16,11 +16,11 @@ export default function Projects() {
         >
           <ProjectCard
             id="5"
-            title="work project"
-            description="React TypeScript website built with Ant Design"
+            title="crm website"
+            description="React TypeScript CRM website built with Ant Design."
             skills={[
               "React.js",
-              "Responsive Web Design",
+              "Zustand",
               "Ant Design",
               "TypeScript",
               "Localization",
@@ -43,13 +43,13 @@ export default function Projects() {
       <ul className={styles.container}>
         <div className={styles.progressBar}></div>
         <TimePoint
-          timeTitle="Improved design and first TypeScript application"
-          date="july 2024"
+          timeTitle="Pinterest inspired image gallery"
+          date="january 2025 - ongoing"
         >
           <ProjectCard
             id="3"
             title="Visual library for artists and photographers"
-            description="Image gallery inspired by pinterest with filtered search and shuffle room"
+            description="Platform for managing images and visual assets, and practice room for artists."
             skills={[
               "React.js",
               "Responsive Web Design",
@@ -68,21 +68,18 @@ export default function Projects() {
             // repoLink="https://github.com/giulianazhu/recipe-book-ts"
           />
         </TimePoint>
-        <TimePoint
-          timeTitle="Building first portfolio website"
-          date="august 2024"
-        >
+        <TimePoint timeTitle="First portfolio website" date="august 2024">
           <ProjectCard
             id="4"
             title="portfolio website"
-            description="Most recent website with responsive design and cool CSS
+            description="First and most  recent website with responsive design and cool CSS
           effects."
             skills={[
               "React.js",
               "Responsive Web Design",
               "CSS Modules",
               "JavaScript",
-              // "Animation"
+              "Animation",
             ]}
             img={["portfolio.png"]}
             alt="screenshot of portfolio website"
@@ -91,13 +88,13 @@ export default function Projects() {
           />
         </TimePoint>
         <TimePoint
-          timeTitle="Improved design and first TypeScript application"
+          timeTitle="React - Typescript recipe book website"
           date="july 2024"
         >
           <ProjectCard
             id="3"
             title="recipe book - TS"
-            description="Recipe book web app using TypeScript with improved web design."
+            description="Allows searching and filtering recipes, add new recipes and comments"
             skills={[
               "React.js",
               "Responsive Web Design",

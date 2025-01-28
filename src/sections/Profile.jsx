@@ -8,7 +8,7 @@ export default function Profile() {
         Entry-level Developer
       </h2>
       <p className={styles.description}>
-        Hello! I am a self-taught Front-end Developer specialized in React.js
+        {"Frontend Developer specialized in React.js and TypeScript."}
       </p>
     </div>
   );

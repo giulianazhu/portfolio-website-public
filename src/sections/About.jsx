@@ -10,22 +10,22 @@ export default function About() {
         <h2>ABOUT ME</h2>
         <div className={styles.text}>
           <p>
-            {"Hi there! I'm Giuliana, thank you for checking out my portfolio"}
+            {"Hi there! I am Giuliana, thank you for checking out my portfolio"}
             <span className={styles.emoji}> &#x1F917;</span>!
           </p>
           <p>
             {
-              "I started learning web development in 2023 and got my first developer job in 2024. Having had a multi-cultural upbringing and being curious minded, I decided to switch to a stimulating and dynamic career, with a fine balance between logic, analysis, and creativity!"
+              "I started learning web development in 2023, and landed on my first internship as front-end developer in 2024. During the internship, I worked as the main FE developer responsible for building all UIs, and integrating all APIs for a new React TypeScript CRM website, and lastly, contributed to maintaining and bug fixing associated angular projects"
             }
           </p>
           <p>
-            {"I'm currently more inclined "}
+            {"I am currently more inclined towards "}
             <span className={styles.highlight}>
               {"front-end or full-stack development"}
             </span>
             {", particularly around "}
             <span className={styles.highlight}>
-              {"web, native, or game applications"}
+              {"web and native applications"}
             </span>
             {
               ". My current goal is to accumulate work experience while continuing exploring my potentials and further opportunities."
