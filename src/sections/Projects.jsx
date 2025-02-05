@@ -44,7 +44,7 @@ export default function Projects() {
         <div className={styles.progressBar}></div>
         <TimePoint
           timeTitle="Pinterest inspired image gallery"
-          date="january 2025 - ongoing"
+          date="january 2025"
         >
           <ProjectCard
             id="3"
@@ -60,12 +60,13 @@ export default function Projects() {
             img={[
               "visuallibrary/1.png",
               "visuallibrary/2.png",
-
-              "visuallibrary/6.png",
+              "visuallibrary/3.png",
+              "visuallibrary/4.png",
+              "visuallibrary/5.png",
             ]}
             alt="screenshot of visual library demo"
-            // demoLink="https://recipe-book-ts.netlify.app/home"
-            // repoLink="https://github.com/giulianazhu/recipe-book-ts"
+            demoLink="https://visual-library.netlify.app"
+            repoLink="https://github.com/giulianazhu/visual-library"
           />
         </TimePoint>
         <TimePoint timeTitle="First portfolio website" date="august 2024">
@@ -81,7 +82,7 @@ export default function Projects() {
               "JavaScript",
               "Animation",
             ]}
-            img={["portfolio.png"]}
+            img={["portfolio/1.png", "portfolio/2.png"]}
             alt="screenshot of portfolio website"
             demoLink="https://giuliana-zhu.netlify.app/"
             repoLink="https://github.com/giulianazhu/portfolio-website-public"

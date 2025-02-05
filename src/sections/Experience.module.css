@@ -31,6 +31,10 @@
   align-items: center;
   gap: 5rem;
   font-size: 2rem;
+  p {
+    font-size: 1.6rem;
+    opacity: 0.8;
+  }
 }
 
 .button {
