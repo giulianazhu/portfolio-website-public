@@ -2,7 +2,7 @@ import styles from "./Projects.module.css";
 import { RiArrowDownSFill } from "react-icons/ri";
 import { externalRedirect } from "../js-utils/utils";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
-import { Carousel } from "antd";
+import { Carousel, Flex } from "antd";
 
 export default function Projects() {
   return (
@@ -25,14 +25,8 @@ export default function Projects() {
               "TypeScript",
               "Localization",
             ]}
-            img={[
-              "workproject1/wp1.jpg",
-              "workproject1/wp2.jpg",
-              "workproject1/wp3.jpg",
-              "workproject1/wp4.png",
-            ]}
             alt="example website screenshot"
-            isWorkProject={true}
+            isConfidential={true}
           />
         </TimePoint>
         <div className={styles.arrowHead}>
@@ -151,31 +145,28 @@ export function ProjectCard({
   alt,
   demoLink,
   repoLink,
-  isWorkProject = false,
+  isConfidential = false,
 }) {
-  return (
-    <li className={`${styles.card} animate`} id={`animate-project-card${id}`}>
-      <div className={styles.imgWrap}>
-        <Carousel arrows={img.length > 1}>
-          {img.map((img, i) => (
-            <img key={i} src={img} alt={alt} className={styles.cardImg} />
-          ))}
-        </Carousel>
-        {/* <div className={styles.link} onClick={() => externalRedirect(demoLink)}>
-          <FiExternalLink />
-        </div> */}
-      </div>
-      <div className={styles.cardContent}>
-        <h4 className={styles.cardTitle}>{title}</h4>
-        <p className={styles.description}>{description}</p>
-        <div className={styles.cardTags}>
-          {skills.map((skill, i) => (
-            <span key={i} className={styles.cardTag}>
-              {skill}
-            </span>
-          ))}
+  if (!isConfidential) {
+    return (
+      <li className={`${styles.card} animate`} id={`animate-project-card${id}`}>
+        <div className={styles.imgWrap}>
+          <Carousel arrows={img.length > 1}>
+            {img.map((img, i) => (
+              <img key={i} src={img} alt={alt} className={styles.cardImg} />
+            ))}
+          </Carousel>
         </div>
-        {!isWorkProject && (
+        <div className={styles.cardContent}>
+          <h4 className={styles.cardTitle}>{title}</h4>
+          <p className={styles.description}>{description}</p>
+          <div className={styles.cardTags}>
+            {skills.map((skill, i) => (
+              <span key={i} className={styles.cardTag}>
+                {skill}
+              </span>
+            ))}
+          </div>
           <div className={styles.cardButtons}>
             <button
               className={styles.cardButton}
@@ -198,8 +189,52 @@ export function ProjectCard({
               Github
             </button>
           </div>
-        )}
-      </div>
-    </li>
-  );
+        </div>
+      </li>
+    );
+  } else
+    return (
+      <li className={`${styles.card} animate`} id={`animate-project-card${id}`}>
+        <div className={styles.imgWrap}>
+          {img ? (
+            <Carousel arrows={img.length > 1}>
+              {img.map((img, i) => (
+                <img key={i} src={img} alt={alt} className={styles.cardImg} />
+              ))}
+            </Carousel>
+          ) : (
+            <Flex vertical>{/* <div>Role: Frontend developer</div> */}</Flex>
+          )}
+        </div>
+        <div className={styles.cardContent}>
+          <h4 className={styles.cardTitle}>{title}</h4>
+          <p className={styles.description}>{description}</p>
+          <div className={styles.cardTags}>
+            {skills.map((skill, i) => (
+              <span key={i} className={styles.cardTag}>
+                {skill}
+              </span>
+            ))}
+          </div>
+          <div className={styles.cardButtons}>
+            {demoLink && (
+              <button
+                className={styles.cardButton}
+                onClick={() => externalRedirect(demoLink)}
+              >
+                DEMO
+              </button>
+            )}
+            {repoLink && (
+              <button
+                className={styles.cardButton}
+                onClick={() => externalRedirect(repoLink)}
+              >
+                Github
+              </button>
+            )}
+          </div>
+        </div>
+      </li>
+    );
 }

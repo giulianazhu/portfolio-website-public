@@ -149,7 +149,6 @@
 }
 
 .imgWrap {
-  position: relative; /* for the external link logo*/
   overflow: hidden;
   border-radius: 15px;
   flex: 1 1 500px;
